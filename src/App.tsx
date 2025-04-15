@@ -1,5 +1,4 @@
-// import "./App.css";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { MantineProvider } from "@mantine/core";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
@@ -9,11 +8,13 @@ const Home = lazy(() => import("./pages/home"));
 function App() {
   return (
     <MantineProvider>
-      <Router>
+      <Router basename="/foremostsystems">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Suspense>
       </Router>
     </MantineProvider>
   );
