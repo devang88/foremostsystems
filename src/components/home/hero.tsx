@@ -9,12 +9,12 @@ const Hero = () => {
         className="flex flex-col md:flex-row md:p-[32px] items-center justify-around"
       >
         {/* Text Content */}
-        <div className="max-w-xl space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <div className="max-w-xl space-y-6 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
             Professional Security <br />
             <span className="text-green-500">Cameras You Can Trust</span>
           </h1>
-          <p className="text-gray-300 text-sm md:text-base">
+          <p className="text-gray-300 text-md md:text-base text-center md:text-left">
             Where to grow your business as a photographer: site or social media?
           </p>
           <Button
@@ -33,7 +33,7 @@ const Hero = () => {
           <img
             src={cameraImg}
             alt="Security Camera"
-            className="w-[300px] md:w-[300px] object-contain"
+            className="w-[240px] md:w-[300px] md:w-[300px] object-contain"
           />
         </div>
       </Container>
