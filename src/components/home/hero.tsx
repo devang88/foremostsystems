@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="bg-[rgba(0,0,0,0.78)] text-white w-full pt-24 pb-16">
       <Container
         size="xl"
-        className="flex flex-col md:flex-row items-center justify-around"
+        className="flex flex-col md:flex-row md:p-[32px] items-center justify-around"
       >
         {/* Text Content */}
         <div className="max-w-xl space-y-6">
@@ -21,6 +21,8 @@ const Hero = () => {
             size="md"
             radius="md"
             className="bg-[#4CAF4F] hover:text-[#E4E1E1] hover:bg-[#60A362] transition-all duration-300 px-6 py-3 text-sm md:text-base font-semibold color-[#FFFFFF] rounded-md"
+            color="#4CAF4F"
+            leftSection={<i className="fab fa-whatsapp"></i>}
           >
             Whatsup Now
           </Button>
@@ -31,7 +33,7 @@ const Hero = () => {
           <img
             src={cameraImg}
             alt="Security Camera"
-            className="w-[300px] md:w-[400px] object-contain"
+            className="w-[300px] md:w-[300px] object-contain"
           />
         </div>
       </Container>

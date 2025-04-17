@@ -42,33 +42,36 @@ const productLogos = [
 
 const ProductBanner: React.FC = () => {
   return (
-    <section className="bg-white py-12 overflow-hidden">
+    <section className="bg-white py-8 md:py-12 overflow-hidden w-full">
+      {/* Centered heading inside container */}
       <Container size="lg" className="text-center">
-        <Title order={2} className="text-gray-800 text-3xl font-bold">
+        <Title
+          order={2}
+          className="text-gray-800 text-2xl md:text-3xl font-bold"
+        >
           Product Brands we Deal with
         </Title>
-        <Text className="text-gray-500 mt-2 mb-2">
+        <Text className="text-gray-500 mt-2 mb-4 text-sm md:text-base">
           Trusted Brands, Superior Quality
         </Text>
+      </Container>
 
+      {/* Full width marquee outside the Container */}
+      <div className="w-full overflow-x-hidden mt-8">
         <div
-          className="py-3 md:py-5 flex animate-marquee w-fit items-center space-x-10"
-          style={{
-            display: "flex",
-            animation: "marquee 20s linear infinite",
-            width: "fit-content",
-          }}
+          className="flex w-max animate-marquee space-x-6 md:space-x-10 px-4"
+          style={{ animation: "marquee 30s linear infinite" }}
         >
           {[...productLogos, ...productLogos].map((src, idx) => (
             <img
               key={idx}
               src={src}
               alt={`Brand ${idx + 1}`}
-              className="h-12 md:h-16 w-auto object-contain  hover:grayscale transition duration-300"
+              className="h-8 md:h-14 w-auto max-w-[180px] max-h-[50px] object-contain hover:grayscale transition duration-300"
             />
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
