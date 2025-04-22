@@ -82,12 +82,12 @@ const ChooseBox = () => {
     return (
       <div ref={sliderRef} className="keen-slider py-8">
         {features.map((item, idx) => (
-          <div className="keen-slider__slide" key={idx}>
+          <div className="keen-slider__slide p-2" key={idx}>
             <Card
               shadow="sm"
               radius="md"
               padding="xl"
-              className="text-center mx-2 min-h-[250px] flex flex-col items-center justify-center"
+              className="text-center hover:shadow-md transition mx-2 min-h-[250px] flex flex-col items-center justify-center"
             >
               <div className="bg-green-100 w-fit mx-auto rounded-full p-3 mb-4 text-black">
                 {item.icon}
