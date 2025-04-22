@@ -81,7 +81,7 @@ const ContactUsSection = () => {
               withAsterisk
               {...form.getInputProps("message")}
             />
-            <Group position="right" mt="md">
+            <Group mt="md" className="items-right">
               <Button type="submit" color="green" size="md" radius="md">
                 Send Message
               </Button>

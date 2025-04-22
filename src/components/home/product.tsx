@@ -360,7 +360,7 @@ const ServicesSection = () => {
   if (isMobile) {
     return (
       <div className="py-12">
-        <Title order={2} align="center" className="mb-6">
+        <Title order={2} className="mb-6 items-center text-center">
           Our Services
         </Title>
         <div ref={sliderRef} className="keen-slider px-2 mt-4">
@@ -387,7 +387,7 @@ const ServicesSection = () => {
                   >
                     {item.description}
                   </Text>
-                  <div className="mt-auto">
+                  <div className="mt-10">
                     <Button size="xs" variant="filled" color="dark">
                       Learn more
                     </Button>
@@ -404,7 +404,7 @@ const ServicesSection = () => {
   return (
     <section className="py-8 md:py-12 overflow-hidden w-full bg-[#F5F7FA]">
       <Container size="lg">
-        <Title order={2} align="center" className="mb-10">
+        <Title order={2} className="mb-10 items-center text-center">
           We Provide The Best Services
         </Title>
 
