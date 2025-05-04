@@ -8,6 +8,8 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import contactus from "../../assets/contact-us.png";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 interface ContactFormValues {
   name: string;
@@ -31,8 +33,25 @@ const ContactUsSection = () => {
   });
 
   const handleSubmit = (values: ContactFormValues) => {
-    console.log("Contact form submitted:", values);
-    // You can replace this with API logic (email or database)
+    try {
+      axios.post(
+        "https://foremostsystem-be-production.up.railway.app/submit/",
+        values
+      );
+      toast.success("Form submitted successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (

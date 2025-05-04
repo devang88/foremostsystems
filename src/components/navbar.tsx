@@ -12,13 +12,15 @@ const Navbar = () => {
         size="xl"
         className="flex items-center justify-between py-4 px-4 md:px-6"
       >
-        <Image
-          src={logo}
-          alt="Logo"
-          width={135}
-          height={150}
-          className="ml-2"
-        />
+        <Link to="/" className="flex items-center">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={135}
+            height={150}
+            className="ml-2"
+          />
+        </Link>
 
         {/* Burger icon on mobile */}
         <div className="flex md:hidden">
@@ -34,19 +36,20 @@ const Navbar = () => {
           <Link to="/" className="hover:text-[#4CAF4F]">
             Home
           </Link>
-          <a href="#service" className="hover:text-[#4CAF4F]">
-            Service
-          </a>
-          <a href="#feature" className="hover:text-[#4CAF4F]">
-            Feature
-          </a>
-          <a href="#product" className="hover:text-[#4CAF4F]">
+
+          <a href="/foremostsystems/products" className="hover:text-[#4CAF4F]">
             Product
           </a>
-          <a href="#testimonial" className="hover:text-[#4CAF4F]">
-            Testimonial
+          <a
+            href="/foremostsystems/contact-us"
+            className="hover:text-[#4CAF4F]"
+          >
+            Contact Us
           </a>
-          <a href="#faq" className="hover:text-[#4CAF4F]">
+          <a href="/foremostsystems/about-us" className="hover:text-[#4CAF4F]">
+            About Us
+          </a>
+          <a href="/foremostsystems/faqs" className="hover:text-[#4CAF4F]">
             FAQ
           </a>
         </div>

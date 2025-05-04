@@ -357,6 +357,11 @@ const ServicesSection = () => {
 
   const visibleServices = services.slice(0, visibleCount);
 
+  const handleLearnMore = (title: string) => {
+    const encodedTitle = encodeURIComponent(title);
+    window.location.href = `/foremostsystems/services/${encodedTitle}`;
+  };
+
   if (isMobile) {
     return (
       <div className="py-12">
@@ -388,7 +393,12 @@ const ServicesSection = () => {
                     {item.description}
                   </Text>
                   <div className="mt-10">
-                    <Button size="xs" variant="filled" color="dark">
+                    <Button
+                      size="xs"
+                      variant="filled"
+                      color="dark"
+                      onClick={() => handleLearnMore(item.title)}
+                    >
                       Learn more
                     </Button>
                   </div>
@@ -434,7 +444,12 @@ const ServicesSection = () => {
                   </Text>
                 </div>
                 <div className="mt-6">
-                  <Button size="xs" variant="filled" color="dark">
+                  <Button
+                    size="xs"
+                    variant="filled"
+                    color="dark"
+                    onClick={() => handleLearnMore(item.title)}
+                  >
                     Learn more
                   </Button>
                 </div>
