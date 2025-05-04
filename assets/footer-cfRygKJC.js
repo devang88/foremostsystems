@@ -1,0 +1,1 @@
+import{j as e}from"./index-BTQqN1Kt.js";const r=()=>e.jsx("footer",{className:"bg-gray-800 text-white py-4",children:e.jsx("div",{className:"container mx-auto text-center",children:e.jsxs("p",{children:["© ",new Date().getFullYear()," Foremost Systems. All rights reserved."]})})});export{r as F};
