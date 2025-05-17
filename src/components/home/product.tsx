@@ -359,7 +359,7 @@ const ServicesSection = () => {
 
   const handleLearnMore = (title: string) => {
     const encodedTitle = encodeURIComponent(title);
-    window.location.href = `/foremostsystems/services/${encodedTitle}`;
+    window.location.href = `/services/${encodedTitle}`;
   };
 
   if (isMobile) {

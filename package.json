@@ -1,14 +1,14 @@
 {
-  "homepage": "https://devang88.github.io/foremostsystems",
-  "name": "foremostsystems",
+  "homepage": "https://foremostsystem.in/",
+  "name": "foremostsystem",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
+    "build": "vite build",
+    "predeploy": "npm run build && cp build/index.html build/404.html",
     "deploy": "gh-pages -d build",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

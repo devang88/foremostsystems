@@ -37,19 +37,16 @@ const Navbar = () => {
             Home
           </Link>
 
-          <a href="/foremostsystems/products" className="hover:text-[#4CAF4F]">
+          <a href="/products" className="hover:text-[#4CAF4F]">
             Product
           </a>
-          <a
-            href="/foremostsystems/contact-us"
-            className="hover:text-[#4CAF4F]"
-          >
+          <a href="/contact-us" className="hover:text-[#4CAF4F]">
             Contact Us
           </a>
-          <a href="/foremostsystems/about-us" className="hover:text-[#4CAF4F]">
+          <a href="/about-us" className="hover:text-[#4CAF4F]">
             About Us
           </a>
-          <a href="/foremostsystems/faqs" className="hover:text-[#4CAF4F]">
+          <a href="/faqs" className="hover:text-[#4CAF4F]">
             FAQ
           </a>
         </div>

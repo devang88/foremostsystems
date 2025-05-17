@@ -17,7 +17,7 @@ const SubService = lazy(() => import("./pages/subservice"));
 function App() {
   return (
     <MantineProvider>
-      <Router basename="/foremostsystems">
+      <Router basename="/">
         <Navbar />
         <ToastContainer />
         <Suspense
